@@ -11,8 +11,8 @@ st.title('Job and Applicant Recommendation System')
 # Load data
 @st.cache
 def load_data():
-    data1 = pd.read_csv('data/"C:\Users\ANTOH\my_streamlit_app\data\Combined_Jobs_Final.csv"')
-    data2 = pd.read_csv('data/"C:\Users\ANTOH\my_streamlit_app\data\Experience (1).csv"')
+    data1 = pd.read_csv(data/"C:\Users\ANTOH\my_streamlit_app\data\Combined_Jobs_Final.csv")
+    data2 = pd.read_csv(data/"C:\Users\ANTOH\my_streamlit_app\data\Experience (1).csv")
     return data1, data2
 
 data1, data2 = load_data()
