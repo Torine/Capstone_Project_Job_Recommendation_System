@@ -17,7 +17,10 @@ data1, data2 = load_data()
 
 # Sidebar for navigation
 st.sidebar.title('Navigation')
-selection = st.sidebar.radio("Choose an option", ["Applicant Job Recommendations", "Job Recommendations for Applicant"])
+selection = st.sidebar.radio(
+    "Choose an option",
+    ["Applicant Job Recommendations", "Job Recommendations for Applicant"]
+)
 
 if selection == "Applicant Job Recommendations":
     st.subheader("Get Job Recommendations for a Job")
@@ -32,4 +35,3 @@ elif selection == "Job Recommendations for Applicant":
     if st.button("Get Recommendations"):
         recommendations = Job_Applicant(applicant_id)
         st.write(recommendations)
-
