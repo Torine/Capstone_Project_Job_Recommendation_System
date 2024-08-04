@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 from models.recommendation_system import Applicant_Job, Job_Applicant
@@ -10,9 +11,11 @@ st.title('Job and Applicant Recommendation System')
 # Load data
 @st.cache
 def load_data():
-    return pd.read_csv(data/r"C:\Users\ANTOH\my_streamlit_app\data\Experience (1).csv")
-           pd.read_csv(data/r"C:\Users\ANTOH\my_streamlit_app\data\Combined_Jobs_Final.csv")
-data = load_data()
+    data1 = pd.read_csv('data/"C:\Users\ANTOH\my_streamlit_app\data\Combined_Jobs_Final.csv"')
+    data2 = pd.read_csv('data/"C:\Users\ANTOH\my_streamlit_app\data\Experience (1).csv"')
+    return data1, data2
+
+data1, data2 = load_data()
 
 # Sidebar for navigation
 st.sidebar.title('Navigation')
@@ -34,11 +37,10 @@ elif selection == "Job Recommendations for Applicant":
 
 elif selection == "LDA Visualization":
     st.subheader("LDA Visualization")
-    lda_result = perform_lda(data)
+    lda_result = perform_lda(data1)  # Pass the appropriate dataset
     st.write(lda_result)  # Adjust according to how you want to display the results
 
 elif selection == "t-SNE Visualization":
     st.subheader("t-SNE Visualization")
-    tsne_result = perform_tsne(data)
+    tsne_result = perform_tsne(data2)  # Pass the appropriate dataset
     st.write(tsne_result)  # Adjust according to how you want to display the results
-
