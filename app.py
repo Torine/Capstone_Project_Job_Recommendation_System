@@ -17,7 +17,7 @@ data1, data2 = load_data()
 
 # Sidebar for navigation
 st.sidebar.title('Navigation')
-selection = st.sidebar.radio("Choose an option", ["Applicant Job Recommendations", "Job Recommendations for Applicant", "LDA Visualization", "t-SNE Visualization"])
+selection = st.sidebar.radio("Choose an option", ["Applicant Job Recommendations", "Job Recommendations for Applicant"])
 
 if selection == "Applicant Job Recommendations":
     st.subheader("Get Job Recommendations for a Job")
