@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(r"C:\Users\ANTOH\my_streamlit_app")
 
 import streamlit as st
 import pandas as pd
