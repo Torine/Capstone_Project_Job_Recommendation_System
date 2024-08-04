@@ -2,8 +2,6 @@
 import streamlit as st
 import pandas as pd
 from models.recommendation_system import Applicant_Job, Job_Applicant
-from models.model_lda import perform_lda
-from models.model_tsne import perform_tsne
 
 # Streamlit app title
 st.title('Job and Applicant Recommendation System')
@@ -35,12 +33,3 @@ elif selection == "Job Recommendations for Applicant":
         recommendations = Job_Applicant(applicant_id)
         st.write(recommendations)
 
-elif selection == "LDA Visualization":
-    st.subheader("LDA Visualization")
-    lda_result = perform_lda(data1)  # Pass the appropriate dataset
-    st.write(lda_result)  # Adjust according to how you want to display the results
-
-elif selection == "t-SNE Visualization":
-    st.subheader("t-SNE Visualization")
-    tsne_result = perform_tsne(data2)  # Pass the appropriate dataset
-    st.write(tsne_result)  # Adjust according to how you want to display the results
