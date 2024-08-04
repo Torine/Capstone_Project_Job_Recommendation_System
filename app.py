@@ -10,7 +10,7 @@ st.title('Job and Applicant Recommendation System')
 # Load data
 @st.cache
 def load_data():
-    return pd.read_csv('data/your_data.csv')
+    return pd.read_csv('data2/rC:\Users\ANTOH\Downloads\Experience.csv\Experience.csv')
 
 data = load_data()
 
