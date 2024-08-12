@@ -64,6 +64,7 @@ The selected models were trained using the prepared datasets, with hyperparamete
 ### 5.1 Model Performance
 ### Model 1
 Content Based Filtering
+
 Precision:  0.9333333333333332
 Recall:  0.35
 mrr_value:  1.0
@@ -71,6 +72,7 @@ ndcg:  0.5137088609996164.
 ### Model 2
 K-Nearest Neighbors (KNN) and Singular Value Decomposition (SVD)
 Both had a similar score below.
+
 Precision:  0.6
 Recall:  1.0
 mrr_value:  1.0
