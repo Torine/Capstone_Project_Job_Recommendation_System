@@ -59,21 +59,36 @@ Content-Based Filtering: Used TF-IDF to match job seekers' profiles with job des
 Collaborative Filtering: Analyzed job seekers' behavior to suggest jobs that similar users have viewed or applied for.
 ### 4.2 Model Training
 The selected models were trained using the prepared datasets, with hyperparameter tuning applied to optimize performance.
-### 4.3 Model Evaluation
-Evaluation Metrics: Precision, Recall, and F1 Score were used to evaluate the models. The best-performing model was chosen based on its ability to accurately match job seekers with relevant job postings.
 
 ### 5. Evaluation
 ### 5.1 Model Performance
-The final model demonstrated strong performance across all key metrics:
-Precision: High precision ensured that the recommended jobs were relevant to the job seeker's profile.
-Recall: Ensured that the system did not miss out on potentially relevant job opportunities.
-F1 Score: Balanced the trade-off between precision and recall, ensuring overall accuracy.
-### 5.2 User Testing
-User testing was conducted to assess the effectiveness of the recommendations in real-world scenarios. Feedback was gathered from job seekers and recruiters to refine the system further.
-### 5.3 Success Metrics
-User Satisfaction: Measured through surveys and engagement metrics.
-Recruitment Efficiency: Assessed by tracking the time recruiters spent finding suitable candidates.
-System Scalability: Evaluated by stress testing the system under increasing data volumes and user traffic.
+### Model 1
+Content Based Filtering
+Precision:  0.9333333333333332
+Recall:  0.35
+mrr_value:  1.0
+ndcg:  0.5137088609996164.
+### Model 2
+K-Nearest Neighbors (KNN) and Singular Value Decomposition (SVD)
+Both had a similar score below.
+Precision:  0.6
+Recall:  1.0
+mrr_value:  1.0
+ndcg:  1.0
+### 5.2 Model Evaluation
+Model 1:
+Conclusion:
+ Highly precise with perfect top ranking, but low recall limits the range of relevant jobs shown.
+
+Insight:
+ Ideal for focused, top-quality recommendations; needs better recall and ranking beyond top jobs.
+
+Model 2:
+Conclusion: 
+Perfect coverage and ranking, but moderate precision includes some less relevant jobs.
+
+Insight:
+ Best for comprehensive job listings with perfect ranking; can improve by increasing precision.
 
 ### 6. Deployment
 ### 6.1 Web Application
